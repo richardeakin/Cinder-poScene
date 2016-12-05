@@ -135,6 +135,8 @@ namespace po { namespace scene {
         void resetFbos();
         ci::gl::FboRef mFbo;
         ci::gl::FboRef mMaskFbo;
+
+        ci::signals::ScopedConnection	mConnWindowResize;
     };
 	
 } } //  namespace po::scene

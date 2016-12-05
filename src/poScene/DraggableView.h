@@ -31,5 +31,8 @@ namespace po { namespace scene {
 
 		// Signals
 		DragAndDropSignal mSignalDragBegan, mSignalDragged, mSignalDragEnded;
+
+	private:
+		ci::signals::ConnectionList	mConnections;
 	};
 }}
