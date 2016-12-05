@@ -44,6 +44,7 @@
 
 #include "cinder/CinderMath.h"
 #include "cinder/app/App.h"
+#include "cinder/gl/gl.h"
 
 #include "poScene/View.h"
 #include "poScene/ShapeView.h"
@@ -992,7 +993,7 @@ namespace po { namespace scene {
 	
     void View::drawBounds()
     {
-        ci::gl::color(mBoundsColor);
+        ci::gl::ScopedColor color(mBoundsColor);
         
         //	Draw bounding box
         ci::gl::drawStrokedRect(getBounds());
